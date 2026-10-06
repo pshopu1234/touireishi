@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>燈依 | 本鑑定のご案内</title>
+<meta name="description" content="迷いの奥を、静かに照らす。燈依の本鑑定。灯プラン9,980円・燈プラン20,000円。">
+<meta name="theme-color" content="#0b0907">
+<meta property="og:type" content="website">
+<meta property="og:title" content="燈依 | 本鑑定のご案内">
+<meta property="og:description" content="迷いの奥を、静かに照らす。">
+<meta property="og:url" content="https://pshopu1234.github.io/touireishi/">
+<meta property="og:image" content="https://pshopu1234.github.io/touireishi/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pshopu1234.github.io/touireishi/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>document.documentElement.className = 'js';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;500&family=Noto+Sans+JP:wght@300;400&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<script src="candle-flame.js" defer></script>
+<style>
+  :root {
+    --void: #0b0907;
+    --void-deep: #060504;
+    --flame: #f0a35e;
+    --ember: #c8693a;
+    --frost: #efe8de;
+    --dim: #8c8279;
+    --gold-thread: #d4b07a;
+    --line: rgba(239, 232, 222, 0.11);
+    --candle-light: 0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--void);
+    color: var(--frost);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 2.0;
+    letter-spacing: 0.015em;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--ember); color: var(--void); }
+  .en { font-family: 'Cormorant Garamond', serif; font-style: italic; }
+  .serif { font-family: 'Noto Serif JP', serif; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; min-height: 100vh; min-height: 100svh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 8vh 6vw; overflow: hidden;
+  }
+  .hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 75% 65% at 50% 34%, transparent 0%, var(--void) 80%);
+    z-index: 1; pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
+  .flame { display: inline-block; aspect-ratio: 3 / 5; width: clamp(100px, 30vw, 132px); margin-bottom: 0.6rem; }
+  .seq { position: relative; }
+  .eyebrow {
+    font-size: 0.72rem; letter-spacing: 0.42em; text-indent: 0.42em; color: var(--flame);
+    font-weight: 400; margin-bottom: 1.8rem;
+  }
+  .namemark {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    gap: clamp(0.9rem, 4vw, 1.8rem);
+  }
+  /* 炎の揺らぎに合わせて、名前の後ろの光も揺れる */
+  .namemark::before {
+    content: ""; position: absolute; left: 50%; top: 50%; width: 120%; aspect-ratio: 2.2;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(closest-side, rgba(240,163,94,.16), transparent);
+    opacity: var(--candle-light); pointer-events: none;
+  }
+  .namemark .rule {
+    flex: 1 1 auto; width: 56px; max-width: 68px; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(212,176,122,0.55));
+  }
+  .namemark .rule:last-child { background: linear-gradient(to left, transparent, rgba(212,176,122,0.55)); }
+  .hero h1 {
+    position: relative;
+    font-family: 'Noto Serif JP', serif; font-weight: 200;
+    font-size: clamp(3.2rem, 19vw, 6.2rem);
+    letter-spacing: 0.22em; text-indent: 0.22em;
+    line-height: 1.1; white-space: nowrap;
+    background: linear-gradient(175deg, #fffaf0 0%, #f4e6cd 45%, #b39572 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    filter: drop-shadow(0 0 30px rgba(240,140,60,0.32));
+    opacity: calc(0.8 + var(--candle-light) * 0.2);
+  }
+  .romaji {
+    margin-top: 1.3rem; font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-size: 0.8rem; letter-spacing: 0.62em; text-indent: 0.62em;
+    color: var(--dim);
+  }
+  .hero-sub {
+    margin-top: 2rem; font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-size: clamp(0.98rem, 3.8vw, 1.2rem); letter-spacing: 0.08em; color: var(--dim); line-height: 2;
+  }
+  .scroll-hint {
+    position: absolute; bottom: 2.6rem; left: 50%; transform: translateX(-50%); z-index: 2;
+    width: 1px; height: 46px; background: linear-gradient(to bottom, transparent, var(--dim));
+    animation: hint-fade 2.6s ease-in-out infinite;
+  }
+  @keyframes hint-fade { 0%, 100% { opacity: 0.12; } 50% { opacity: 0.6; } }
+
+  /* 炎が灯ってから、文字が順に浮かび上がる */
+  .js .seq > *, .js .scroll-hint { opacity: 0; transform: translateY(8px); transition: opacity 1.8s ease, transform 1.8s ease; }
+  .js.lit .seq > * { opacity: 1; transform: none; }
+  .js.lit .seq > :nth-child(2) { transition-delay: .35s; }
+  .js.lit .seq > :nth-child(3) { transition-delay: .7s; }
+  .js.lit .seq > :nth-child(4) { transition-delay: 1.05s; }
+  .js.lit .scroll-hint { opacity: 1; transform: translateX(-50%); transition-delay: 2s; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 11vh 8vw; position: relative; }
+  .section-inner { max-width: 720px; margin: 0 auto; }
+  .section-head { text-align: center; margin-bottom: 6vh; }
+  .section-head h2 {
+    font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-size: clamp(1.7rem, 4vw, 2.4rem); letter-spacing: 0.1em; line-height: 1.6;
+  }
+  .prose p {
+    font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-size: min(4.3vw, 1.08rem); letter-spacing: 0.01em; line-height: 2.05;
+    margin-bottom: 1.8rem; line-break: strict;
+  }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose p.dim { color: var(--dim); }
+
+  .intro, .budget, .notes { padding-left: 6vw; padding-right: 6vw; }
+  .intro .section-inner, .budget .section-inner, .notes .section-inner { max-width: 22em; }
+  .intro .signoff { margin-top: 2.6rem; font-family: 'Noto Serif JP', serif; font-size: 0.8rem; letter-spacing: 0.32em; color: var(--gold-thread); text-align: right; }
+
+  /* ---------- Plans ---------- */
+  .plans .section-inner { max-width: 30rem; }
+  .plan {
+    position: relative; padding: 2.8rem 1.6rem 2.6rem;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(240,163,94,.05), rgba(240,163,94,0) 50%);
+  }
+  .plan + .plan { margin-top: 2.6rem; }
+  .plan::before {
+    content: ""; position: absolute; top: -1px; left: 50%; width: 96px; height: 1px; transform: translateX(-50%);
+    background: linear-gradient(to right, transparent, var(--gold-thread), transparent);
+  }
+  .plan-top { text-align: center; }
+  .plan .num { display: block; font-size: 1.5rem; line-height: 1; color: var(--flame); opacity: .8; }
+  .plan-eyebrow { margin-top: 1rem; font-size: 0.74rem; letter-spacing: 0.18em; color: var(--dim); }
+  .plan-name {
+    margin-top: 0.4rem; font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-size: clamp(1.7rem, 7vw, 2.1rem); letter-spacing: 0.16em; text-indent: 0.16em; line-height: 1.6;
+  }
+  .price { margin-top: 0.9rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 3.1rem; line-height: 1; letter-spacing: 0.02em; }
+  .price .yen { font-family: 'Noto Serif JP', serif; font-style: normal; font-weight: 300; font-size: 0.95rem; margin-left: 0.35em; color: var(--dim); }
+  .support {
+    display: inline-block; margin-top: 1.4rem; padding: 0.2rem 1rem;
+    border: 1px solid rgba(212,176,122,.4);
+    font-size: 0.74rem; letter-spacing: 0.16em; color: var(--gold-thread);
+  }
+  .plan-lead { margin-top: 2.2rem; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: min(4vw, 1rem); line-height: 2.05; text-align: center; }
+  .cta {
+    display: block; margin-top: 2rem; padding: 1.1rem 0.5rem; text-align: center; text-decoration: none;
+    border: 1px solid var(--gold-thread); color: var(--gold-thread);
+    font-family: 'Noto Serif JP', serif; font-size: 1rem; letter-spacing: 0.22em; text-indent: 0.22em;
+    box-shadow: inset 0 0 28px rgba(240,163,94,.07), 0 0 32px rgba(240,163,94,.05);
+    transition: color 0.5s ease, background 0.5s ease, box-shadow 0.5s ease;
+  }
+  .cta:hover, .cta:focus-visible { color: var(--void); background: var(--gold-thread); box-shadow: 0 0 40px rgba(240,163,94,.25); }
+  .cta:focus-visible { outline: 2px solid var(--flame); outline-offset: 4px; }
+  .plan-note { margin-top: 1rem; font-size: 0.76rem; line-height: 1.85; color: var(--dim); text-align: center; }
+  .plan-detail { margin-top: 2.4rem; padding-top: 2.2rem; border-top: 1px solid var(--line); }
+  .plan-detail h4 {
+    margin: 2.2rem 0 1rem; padding-left: 1rem; border-left: 1px solid rgba(212,176,122,.4);
+    font-family: 'Noto Serif JP', serif; font-weight: 500; font-size: 1rem; line-height: 1.7; color: var(--gold-thread);
+  }
+  .plan-detail h4:first-child { margin-top: 0; }
+  .plan-detail p { margin-bottom: 1.2rem; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: min(3.9vw, 0.98rem); line-height: 2.05; line-break: strict; }
+  .plan-detail p:last-child { margin-bottom: 0; }
+  .plan-detail ul { list-style: none; }
+  .plan-detail li { position: relative; padding-left: 1.2em; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: min(3.9vw, 0.98rem); line-height: 2.05; line-break: strict; }
+  .plan-detail li + li { margin-top: 0.3rem; }
+  .plan-detail li::before { content: ""; position: absolute; left: 0; top: 1.02em; width: 0.55em; height: 1px; background: var(--gold-thread); }
+
+  /* ---------- Flow ---------- */
+  .step-list { max-width: 780px; margin: 0 auto; list-style: none; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 2rem; padding: 2.6rem 0; border-top: 1px solid var(--line); }
+  .step:last-child { border-bottom: 1px solid var(--line); }
+  .step .num { font-size: 2.4rem; color: var(--flame); opacity: 0.75; line-height: 1; }
+  .step h3 { font-family: 'Noto Serif JP', serif; font-weight: 500; font-size: clamp(1rem, 3.9vw, 1.2rem); margin-bottom: 0.7rem; line-height: 1.7; }
+  .step p { color: var(--dim); font-size: clamp(0.88rem, 3.4vw, 0.95rem); line-height: 2.05; line-break: strict; word-break: auto-phrase; text-wrap: pretty; }
+  .step p + p { margin-top: 0.8rem; }
+
+  .notes .prose p { font-size: min(3.9vw, 0.95rem); word-break: auto-phrase; text-wrap: pretty; }
+
+  /* ---------- Footer ---------- */
+  footer { text-align: center; padding: 5rem 6vw calc(4rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); }
+  footer .sigil { font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: 1.3rem; letter-spacing: 0.3em; text-indent: 0.3em; color: var(--dim); margin-bottom: 1rem; }
+  footer .handle { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--dim); }
+  footer .handle a { color: var(--flame); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.3s ease; }
+  footer .handle a:hover { border-color: var(--flame); }
+
+  /* スクロールでふわっと現れる */
+  .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 1.2s ease, transform 1.2s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 640px) {
+    .step { grid-template-columns: 1fr; gap: 0.5rem; }
+    section { padding: 9vh 7vw; }
+    .plans { padding-left: 5vw; padding-right: 5vw; }
+    .plan { padding: 2.6rem 1.3rem 2.4rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .scroll-hint { animation: none; }
+    .js .reveal { opacity: 1; transform: none; }
+    * { transition-duration: 0.01s !important; transition-delay: 0s !important; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <canvas id="motes" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <candle-flame class="flame" delay="0.7" sync-page></candle-flame>
+    <div class="seq">
+      <div class="eyebrow">夜にともす、ひとつの灯</div>
+      <div class="namemark">
+        <span class="rule"></span>
+        <h1>燈依</h1>
+        <span class="rule"></span>
+      </div>
+      <div class="romaji">とうい</div>
+      <p class="hero-sub">迷いの奥を、静かに照らす。</p>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"></div>
+</section>
+
+<section class="intro">
+  <div class="section-inner prose reveal">
+    <div class="section-head">
+      <h2>本鑑定のご案内</h2>
+    </div>
+    <p>心に引っかかっていることを、<br>きちんと言葉にしたいと感じた方へ。</p>
+    <p>本鑑定では、お寄せいただいたご相談を<br>時間をかけて読み解き、<br>今の状態とこの先の道筋を<br>鑑定結果としてお届けします。</p>
+    <p>プランは二つ。<br>異なるのは、視る深さと<br>お届け後のサポートの有無です。</p>
+    <p class="dim">知りたいことの深さと、<br>読んだ後も相談したいかどうかで<br>お選びください。</p>
+    <div class="signoff">燈依</div>
+  </div>
+</section>
+
+
+<section class="plans" id="plans">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <h2>ふたつの灯</h2>
+    </div>
+
+    <article class="plan reveal" aria-labelledby="plan-a">
+      <div class="plan-top">
+        <span class="num en">I</span>
+        <p class="plan-eyebrow">今から少し先までを、深く視る</p>
+        <h3 class="plan-name" id="plan-a">灯プラン</h3>
+        <p class="price">9,980<span class="yen">円</span></p>
+        <span class="support">鑑定結果のお届けまで</span>
+      </div>
+      <p class="plan-lead">いま胸の中に灯っている小さな火と、<br>これから訪れる未来との重なりを、<br>少し先の道のりまで<br>時間をかけて視ていきます。</p>
+      <a class="cta" href="https://touireishi.base.shop/items/161170593">灯プランを申し込む</a>
+      <p class="plan-note">ご購入後は、公式LINEへ<br>ひとことお知らせください。</p>
+      <div class="plan-detail">
+        <h4>お届けする内容</h4>
+        <ul>
+          <li>あなたに向けた深いメッセージ</li>
+          <li>魂の状態や、今世でのテーマ</li>
+          <li>今のお悩みへのアドバイス</li>
+          <li>3〜6か月先までの流れ</li>
+        </ul>
+        <h4>こんな時期の方に</h4>
+        <p>人生の節目や、<br>迷いの真ん中に立たれている方に、<br>特におすすめしています。</p>
+        <p>心がいま何を求め、<br>どこへ向かおうとしているのか。<br>その道すじを辿りながら、<br>あなたおひとりに届けるべき言葉として<br>お渡しします。</p>
+        <h4>鑑定結果のお届けまで</h4>
+        <p>お届け後のご相談は<br>含まれておりません。</p>
+      </div>
+    </article>
+
+    <article class="plan reveal" aria-labelledby="plan-b">
+      <div class="plan-top">
+        <span class="num en">II</span>
+        <p class="plan-eyebrow">いちばん奥に触れる、最上位の鑑定</p>
+        <h3 class="plan-name" id="plan-b">燈プラン</h3>
+        <p class="price">20,000<span class="yen">円</span></p>
+        <span class="support">お届け後のサポート · 1週間</span>
+      </div>
+      <p class="plan-lead">長く受け継がれてきた記憶。<br>この人生で引き受けてきた<br>出来事の意味。<br>そしてこの先へ続く、光の道筋。<br>それらを一本の灯の筋として<br>読み解きます。</p>
+      <a class="cta" href="https://touireishi.base.shop/items/161171480">燈プランを申し込む</a>
+      <p class="plan-note">ご購入後は、公式LINEへ<br>ひとことお知らせください。</p>
+      <div class="plan-detail">
+        <h4>読み解くこと</h4>
+        <ul>
+          <li>言葉になる前から抱えてきた、<br>この人生のテーマ</li>
+          <li>胸の底に残り続けてきた、心の宿題</li>
+          <li>いま越えていくべき試練と、<br>その先で待っている成長の光</li>
+          <li>何を学び、これから<br>どちらへ向かうべきなのか</li>
+        </ul>
+        <h4>こんな問いを抱えている方に</h4>
+        <p>「なぜ、同じ痛みを<br>何度も繰り返してしまうのか」<br>「なぜ、自分は<br>この人生を歩いているのか」<br>「この苦しみには、<br>どんな意味があるのか」</p>
+        <p>人生の大きな折り返しに立つ方、<br>本当の自分と向き合う時期に<br>来ている方のための鑑定です。</p>
+        <p>未来を言い当てるためではなく、<br>本来のあなたとして歩いていく道を<br>ひらくための、人生に一度きりの<br>灯の地図です。</p>
+        <h4>鑑定結果のお届け後、1週間</h4>
+        <p>読んで浮かんだ疑問や、<br>もう少し確かめたいことを、<br>公式LINEでご相談いただけます。</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="budget">
+  <div class="section-inner prose reveal">
+    <div class="section-head">
+      <h2>ご予算について</h2>
+    </div>
+    <p>ご予算が合わない場合は、<br>公式LINEでお気軽にご相談ください。</p>
+    <p class="dim">知りたいこととご予算を伺い、<br>あなたに合わせた内容を<br>ご提案することもできます。</p>
+  </div>
+</section>
+
+
+<section class="flow">
+  <div class="section-head reveal">
+    <h2>お申し込みから<br>お届けまで</h2>
+  </div>
+  <ol class="step-list">
+    <li class="step reveal"><span class="num en">01</span><div><h3>決済ページでお申し込み</h3><p>ご希望のプランを選び、内容をご確認のうえ、お支払いへお進みください。</p></div></li>
+    <li class="step reveal"><span class="num en">02</span><div><h3>LINEで購入のご連絡</h3><p>公式LINEへ「購入しました」と、ご購入時のお名前をお送りください。</p></div></li>
+    <li class="step reveal"><span class="num en">03</span><div><h3>ご相談内容の確認</h3><p>お悩みの詳細を伺い、視ていく範囲を一緒に確かめます。</p></div></li>
+    <li class="step reveal"><span class="num en">04</span><div><h3>鑑定結果のお届け</h3><p>お支払いの確認後、通常48時間以内に鑑定結果をお届けします。混雑状況により前後する場合がございます。</p></div></li>
+    <li class="step reveal"><span class="num en">05</span><div><h3>プランに応じたサポート</h3><p>灯プランは鑑定結果のお届けまで。燈プランはお届け後1週間、内容についてご相談いただけます。</p></div></li>
+  </ol>
+</section>
+
+<section class="notes">
+  <div class="section-inner prose reveal">
+    <div class="section-head">
+      <h2>お申し込み前に</h2>
+    </div>
+    <p class="dim">受付状況は公式LINEでご確認ください。枠が埋まった場合は、キャンセルとなることがあります。</p>
+    <p class="dim">サービスの性質上、ご提供後の返金には応じかねます。ご提供前のキャンセルは可能ですので、お早めにご連絡ください。</p>
+    <p class="dim">鑑定は、これからを考えるための気づきをお伝えするものです。特定の結果や効果を保証するものではありません。</p>
+    <p class="dim">医療・法律・投資など、専門家の判断が必要なご相談は対象外です。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="sigil">燈依</div>
+  <div class="handle">公式LINE&nbsp;<a href="https://lin.ee/wejInYd" target="_blank" rel="noopener">友だち追加はこちら</a></div>
+</footer>
+
+<script>
+  const root = document.documentElement;
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 炎が灯ったら文字を表示（炎のスクリプトが読めなかった時の保険で、3.5秒後にも表示）
+  const lightUp = () => root.classList.add('lit');
+  document.addEventListener('lit', lightUp, { once: true });
+  setTimeout(() => { if (!customElements.get('candle-flame')) lightUp(); }, 3500);
+
+  // 炎の光に照らされて、ゆっくり昇る小さな粒
+  const canvas = document.getElementById('motes');
+  const ctx = canvas.getContext('2d');
+  let w, h, dpr, fx = 0, fy = 0, motes = [], raf = 0, heroVisible = true;
+
+  function resize() {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    w = canvas.width = canvas.offsetWidth * dpr;
+    h = canvas.height = canvas.offsetHeight * dpr;
+    const count = Math.min(140, Math.max(60, Math.floor(canvas.offsetWidth / 6)));
+    motes = Array.from({ length: count }, () => ({
+      x: Math.random() * w, y: Math.random() * h,
+      r: (0.4 + Math.random() * 1.2) * dpr,
+      vy: (0.06 + Math.random() * 0.22) * dpr,
+      drift: Math.random() * Math.PI * 2,
+      tw: Math.random() * Math.PI * 2,
+      tws: 0.03 + Math.random() * 0.12,
+      a: 0.1 + Math.random() * 0.4
+    }));
+    // 炎の位置（粒は炎に近いほど明るく照らされる）
+    const fr = document.querySelector('.flame').getBoundingClientRect(), cr = canvas.getBoundingClientRect();
+    fx = (fr.left + fr.width / 2 - cr.left) * dpr;
+    fy = (fr.top + fr.height * 0.6 - cr.top) * dpr;
+  }
+
+  function draw() {
+    raf = 0;
+    const light = parseFloat(root.style.getPropertyValue('--candle-light')) || 0;
+    ctx.clearRect(0, 0, w, h);
+    for (const m of motes) {
+      m.y -= m.vy; m.drift += 0.006; m.tw += m.tws;
+      m.x += Math.sin(m.drift) * 0.12 * dpr;
+      if (m.y < -10) { m.y = h + 10; m.x = Math.random() * w; }
+      // 炎に近い粒ほど明るく
+      const d = Math.hypot(m.x - fx, m.y - fy) / Math.max(w, h);
+      const near = Math.max(0.2, 1 - d * 1.8);
+      const alpha = m.a * near * light * Math.pow(0.5 + 0.5 * Math.sin(m.tw), 2);
+      if (alpha <= 0.005) continue;
+      ctx.beginPath();
+      ctx.arc(m.x, m.y, m.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255, 190, 120, ' + alpha.toFixed(3) + ')';
+      ctx.fill();
+    }
+    if (heroVisible && !document.hidden) raf = requestAnimationFrame(draw);
+  }
+  const loop = () => { if (!raf && !reduceMotion && heroVisible && !document.hidden) raf = requestAnimationFrame(draw); };
+
+  if (!reduceMotion) {
+    resize();
+    addEventListener('resize', resize);
+    new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; loop(); }).observe(canvas);
+    document.addEventListener('visibilitychange', loop);
+    loop();
+  }
+
+  // スクロールで各ブロックをふわっと表示
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
